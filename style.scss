@@ -1,7 +1,7 @@
-$borderRadius:10rem;
+$borderRadius: 10rem;
 
 @mixin transition() {
-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
 }
 
 * {
@@ -23,23 +23,26 @@ body {
     height: 9.375rem;
     display: block;
     position: relative;
-    border-radius:$borderRadius;
-    background-color: rgb(19, 6, 61);
+    border-radius: $borderRadius;
+    background-color: rgb(23, 5, 82);
     @include transition;
     box-shadow: inset 0 0.5rem 3.75rem rgb(0, 0, 0, 0.1),
-                inset 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1),
-                inset 0 -0.25rem 0.25rem rgb(0, 0, 0, 0.1);
-    
-    &.indicator {
+        inset 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1),
+        inset 0 -0.25rem 0.25rem rgb(0, 0, 0, 0.1);
+
+    & .indicator {
         width: 9.375rem;
         height: 9.375rem;
         position: absolute;
         top: 0;
         left: 0;
         border-radius: $borderRadius;
-        background-color: rgb(53, 9, 197);
+        background: linear-gradient(to bottom, rgb(7, 1, 27), rgb(42, 5, 166));
         cursor: pointer;
         @include transition;
+        box-shadow: inset 0 0.5rem 2.5rem rgba(0, 0, 0, 0.5),
+            inset 0 0.25rem 0.25rem rgba(1, 3, 11, 0.2),
+            inset 0 -0.25rem 0.25rem rgba(1, 2, 18, 0.2);
     }
+    
 }
-
